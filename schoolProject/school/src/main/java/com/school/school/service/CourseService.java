@@ -47,8 +47,17 @@ public class CourseService {
         }).orElseThrow(() -> new RuntimeException(" not fund  " + id));
     }
 
-    // Delete
-    public void deleteCourse(Long id) {
-        courseRepository.deleteById(id);
-    }
-}
+   
+    
+    // Delete student
+    public boolean deleteCoure(Long id) {
+        if (courseRepository.existsById(id)) {
+            courseRepository.deleteById(id);
+            return true;
+        }
+        return false;
+        }
+
+	
+	}
+
