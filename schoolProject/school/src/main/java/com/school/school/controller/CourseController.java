@@ -45,7 +45,7 @@ public class CourseController {
         return ResponseEntity.ok(courseService.updateCourse(id, course));
     }
 
-   
+
     // Delete student
     @DeleteMapping("delete/{id}")
     public String deleteCourse(@PathVariable  long id) {
@@ -54,3 +54,4 @@ public class CourseController {
  
     }
 }
+
